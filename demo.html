@@ -27,21 +27,45 @@
       <div class="editorial-grid">
         <div class="col-left">
           <p>The International Typographic Style, also known as Swiss Style, is a graphic design style that emerged in Switzerland in the 1940s and 1950s.</p>
-          <p>It is characterized by an emphasis on cleanliness, readability, and objectivity.</p>
+          <p>It is characterized by an emphasis on cleanliness, readability, and objectivity. This strict adherence to structure provides a foundation for the entire design system.</p>
         </div>
         <div class="col-main">
-          <h3 class="big-heading">The Power of Precision and Clarity</h3>
+          <h3 class="big-heading">The Power of Precision and Clarity in Composition</h3>
           <p>At its heart, Swiss design seeks universal clarity. Its principles—including the use of grid systems, sans-serif typefaces like Helvetica, and asymmetrical layouts—aim to communicate information in the most efficient and unbiased way possible. This approach often leads to designs that feel timeless and highly functional, devoid of excessive ornamentation.</p>
-          <p>The style's influence is widespread, seen in everything from corporate logos and signage to web interfaces and album art, proving its enduring appeal in conveying complex information simply.</p>
+          <p>The style's influence is widespread, seen in everything from corporate logos and signage to web interfaces and album art, proving its enduring appeal in conveying complex information simply. Note the consistent use of the left margin as the primary anchor for text blocks.</p>
+          <p>This section is intentionally extended to demonstrate how type blocks maintain alignment across a grid when the content naturally overflows a standard screen height. The continuous flow of information, segmented by headings, is key to editorial clarity.</p>
         </div>
         <div class="col-image">
-          <img src="images/radiohead-poster.jpg" alt="Radiohead concert poster from 1997 with bold red typography against black stripes, influenced by Swiss design." class="demo-poster" />
+          <img src="images/image7.jpg" alt="Radiohead concert poster from 1997 with bold red typography against black stripes, influenced by Swiss design." class="demo-poster" />
           <figcaption style="font-size:0.9rem; color:var(--muted);">
             **Radiohead Concert Poster (1997)**<br/>
-            This poster, designed for a Radiohead concert, brilliantly utilizes principles rooted in Swiss design. It features a stark, high-contrast palette (black, white, red), a clear grid (implied by the horizontal bars), and bold, legible sans-serif typography. The asymmetrical placement of information and the emphasis on typographic hierarchy are direct homages to the International Typographic Style, demonstrating its lasting impact on modern graphic communication.
+            This poster, designed for a Radiohead concert, brilliantly utilizes principles rooted in Swiss design. It features a stark, high-contrast palette (black, white, red), a clear grid (implied by the horizontal bars), and bold, legible sans-serif typography.
           </figcaption>
         </div>
       </div>
+
+      <hr style="border: none; border-top: 1px solid var(--muted); margin-top: 4rem;">
+
+      <h2>Visualizing the Grid System</h2>
+      <p>The current layout uses a multi-column grid (`200px 1fr 320px`) for desktop views. This structure achieves **asymmetry**, which is a core feature of the Swiss Style:</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+        <div>
+            <h3>Asymmetrical Balance</h3>
+            <p>Unlike symmetrical design, which feels static, asymmetry uses uneven weights (like the narrow left column and the wide central content block) to create a dynamic but balanced composition. This makes the design more engaging and guides the reader's eye naturally.</p>
+            <ul style="margin-top: 1rem;">
+                <li>The narrow column provides space for annotations and metadata.</li>
+                <li>The wide central column hosts the main text block, maximizing readability.</li>
+                <li>The right column is reserved for visual aids, like the poster image.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Use of White Space</h3>
+            <p>In this design, the generous margins and gaps (`--gutter: 32px;`) are just as important as the content. This white space allows the content to "breathe," reducing visual clutter and emphasizing the clear separation of the three columns. The high line-height further increases white space within the text blocks, ensuring high readability even at a larger font size.</p>
+            <p>The overall result is an orderly, clean, and highly functional demonstration of the International Typographic Style.</p>
+        </div>
+      </div>
+      
     </section>
   </main>
 

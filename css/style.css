@@ -1,4 +1,4 @@
-/* Swiss / International Style CSS - Upgraded for Neo-Minimalism/Nordic Vibe */
+/* Swiss / International Style CSS - Upgraded for Neo-Minimalism/Nordic Vibe and Larger Text */
 :root{
   --bg:#fbfbfb; /* Slightly off-white background for softness */
   --text:#1c1c1c; /* Softer black text */
@@ -13,19 +13,22 @@
 html,body{height:100%}
 body{
   margin:0;
+  /* INCREASED BASE FONT SIZE AND LINE HEIGHT for distance reading */
+  font-size: 1.15rem; 
+  line-height: 1.8;
   font-family:var(--sans);
   color:var(--text);
   background:var(--bg);
-  line-height:1.7; /* Increased line-height for readability */
 }
 
-/* HEADER & NAVIGATION (Minimalist, subtle separation) */
+/* HEADER & NAVIGATION */
 .site-header{
-  border-bottom:1px solid #eeeeee; /* Lighter border */
+  border-bottom:1px solid #eeeeee;
   padding:var(--pad);
 }
 .header-inner{max-width:var(--maxwidth); margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
-.title{font-weight:400; margin:0; font-size:1.1rem; letter-spacing:0.04em;} /* Lighter font weight */
+/* LARGER TITLE */
+.title{font-weight:400; margin:0; font-size:1.5rem; letter-spacing:0.04em;}
 .main-nav a{margin-left:1.5rem; text-decoration:none; color:var(--muted); font-weight:400; transition: color 0.2s;}
 .main-nav a:hover{color:var(--text);}
 .main-nav a.active{color:var(--text); font-weight:600;}
@@ -33,17 +36,19 @@ body{
 /* MAIN CONTENT */
 .container{max-width:var(--maxwidth); margin:4rem auto; padding:0 calc(var(--pad) * 1.2);}
 
-/* LEAD SECTION (The big, centered text like "Nordic Minimalism") */
+/* LEAD SECTION */
 .lead-center{
     text-align: center;
     padding: 6rem 0 8rem;
-    background-color: #ffffff; /* White block for contrast */
-    margin-top: -4rem; /* Pull up to hide margin above */
+    background-color: #ffffff; 
+    margin-top: -4rem; 
 }
-.lead-center h2{font-size:3rem; margin:0 0 1rem 0; font-weight:400; line-height:1.1;}
-.lead-center p{max-width:800px; margin:0 auto 2rem auto; color:var(--muted); font-size:1.2rem;}
+/* LARGER HERO HEADING */
+.lead-center h2{font-size:4rem; margin:0 0 1rem 0; font-weight:400; line-height:1.1;}
+/* LARGER HERO TEXT */
+.lead-center p{max-width:800px; margin:0 auto 2rem auto; color:var(--muted); font-size:1.5rem;}
 
-/* FEATURE GRID (The three-column section below the main text) */
+/* FEATURE GRID */
 .grid-features{
     display: flex;
     justify-content: space-around;
@@ -57,56 +62,68 @@ body{
 }
 .grid-features h3{
     text-transform: uppercase;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     letter-spacing: 0.1em;
     color: var(--accent); /* Uses the new Yellow Accent */
     margin-bottom: 0.5rem;
 }
 .grid-features p{
-    font-size: 0.95rem;
+    font-size: 1.15rem; 
     color: var(--muted);
 }
 .grid-features ul{display:none;}
 
-/* BUTTONS (Slightly rounded and clean) */
+/* General Section Headings */
+h2{
+  font-size: 2.5rem; 
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* BUTTONS */
 .cta{margin-top:2rem; text-align:center;}
-.btn{display:inline-block; background:var(--text); color:var(--bg); border:2px solid var(--text); padding:.6rem 1.5rem; border-radius:4px; text-decoration:none; font-weight:600; margin:0 0.5rem; transition: background 0.2s, color 0.2s;}
+.btn{display:inline-block; background:var(--text); color:var(--bg); border:2px solid var(--text); padding:.8rem 2rem; border-radius:4px; text-decoration:none; font-weight:600; margin:0 0.5rem; transition: background 0.2s, color 0.2s;}
 .btn.outline{background:transparent; color:var(--text); border-color:var(--text);}
 .btn.outline:hover{background:var(--text); color:var(--bg);}
 
 /* FOOTER */
-.site-footer{border-top:1px solid #eeeeee; margin-top:6rem; padding:1.5rem 0; text-align:center; font-size:.9rem; color:var(--muted); margin-bottom:0;}
+.site-footer{border-top:1px solid #eeeeee; margin-top:6rem; padding:1.5rem 0; text-align:center; font-size:1rem; color:var(--muted); margin-bottom:0;}
 
-/* GALLERY & DEMO (Keeping the existing structural CSS for these pages) */
-.swiss-gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; margin-top:2rem;}
+/* GALLERY & DEMO */
+.swiss-gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(320px,1fr)); gap:32px; margin-top:2rem;} 
 .swiss-figure{display:flex; flex-direction:column; gap:8px; align-items:flex-start;}
 .photo{width:100%; height:auto; border:1px solid #f0f0f0; box-shadow:0 10px 30px rgba(0,0,0,0.02); border-radius:4px;}
-.figcaption{font-size:0.95rem; color:var(--muted); line-height:1.4;}
+/* LARGER CAPTIONS */
+.figcaption{font-size:1.1rem; color:var(--muted); line-height:1.6;} 
 
 /* Demo editorial grid */
-.editorial-grid{display:grid; grid-template-columns:180px 1fr 320px; gap:var(--gutter); align-items:start; margin-top:2rem;}
-.col-left{color:var(--muted); font-size:.95rem;}
-.col-main .big-heading{font-size:2.2rem; margin:0 0 1.5rem 0; font-weight:700; line-height:1.1;}
+.editorial-grid{display:grid; grid-template-columns:200px 1fr 320px; gap:var(--gutter); align-items:start; margin-top:2rem;} 
+/* LARGER SIDE TEXT */
+.col-left{color:var(--muted); font-size:1.1rem;}
+/* LARGER GRID HEADING */
+.col-main .big-heading{font-size:3rem; margin:0 0 1.5rem 0; font-weight:700; line-height:1.1;}
 .col-image .img-sample{width:100%; height:auto; border-radius:4px;}
-
-/* NEW: Style for the specific demo image */
 .demo-poster {
   width: 100%;
-  max-width: 450px; /* Adjust as needed, the poster itself is portrait */
+  max-width: 450px; 
   height: auto;
-  display: block; /* Ensures it takes up full width of its container and centers properly */
-  margin: 0 auto 1rem auto; /* Center the image and add margin below */
-  border: 1px solid #e0e0e0; /* Subtle border */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow */
+  display: block; 
+  margin: 0 auto 1rem auto; 
+  border: 1px solid #e0e0e0; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
 
 /* responsive */
 @media (max-width:900px){
   .editorial-grid{grid-template-columns:1fr; gap:16px;}
   .header-inner{flex-direction:column; align-items:flex-start; gap:12px;}
   .lead-center{padding: 4rem 1rem 5rem;}
-  .lead-center h2{font-size:2.2rem;}
+  .lead-center h2{font-size:3rem;}
+  .lead-center p{font-size: 1.3rem;}
   .grid-features{flex-direction:column; gap:3rem; padding:1rem;}
   .grid-features div {max-width: 100%;}
+  body{font-size: 1rem; line-height: 1.7;}
+  h2{font-size: 2rem;}
+  .col-main .big-heading{font-size: 2.2rem;}
 }

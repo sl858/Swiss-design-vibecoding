@@ -7,12 +7,12 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="header-inner">
-      <h1 class="title">Swiss / International Style — History</h1>
+      <h1 class="title">Swiss / International Style</h1>
       <nav aria-label="Main navigation" class="main-nav">
         <a href="index.html">Home</a>
-        <a href="history.html">History</a>
+        <a href="history.html" class="active">History</a>
         <a href="examples.html">Examples</a>
         <a href="demo.html">Demo</a>
       </nav>
@@ -21,41 +21,66 @@
 
   <main class="container">
     <article>
-      <h2>Origins and timeline</h2>
-      <p>The Swiss Style developed in Switzerland in the 1940s–1960s and is often called the International Typographic Style. It stresses readability, grid-based layouts, and clarity.</p>
+      <h2>Origins and Timeline</h2>
+      <p>The Swiss Style developed in Switzerland in the 1940s–1960s and is formally known as the **International Typographic Style (ITS)**. It stressed a scientific, problem-solving approach to design, focusing on readability, grid-based layouts, and absolute clarity. Its roots were a reaction against the excessive ornamentation and romanticism of 19th-century design.</p>
 
-      <h3>Timeline (condensed)</h3>
-      <ul>
-        <li><strong>1940s–1950s</strong> — Post-war graphic designers in Switzerland refine grid systems and typographic rules.</li>
-        <li><strong>1950s–1960s</strong> — Influence spreads internationally, especially in corporate identity and editorial design.</li>
-        <li><strong>1970s–present</strong> — Swiss principles are standard in modern UI and branding.</li>
+      <h3>Timeline (Condensed)</h3>
+      <ul style="margin-bottom: 3rem;">
+        <li>**1940s–1950s:** Post-war graphic designers in major Swiss cities like **Zurich** and **Basel** begin refining the grid system and codified typographic rules.</li>
+        <li>**1957:** The release of **Neue Haas Grotesk** (later renamed **Helvetica** in 1960) provides the style with its most iconic and essential typeface.</li>
+        <li>**1960s–1970s:** The influence spreads internationally, especially in corporate identity, signage, and editorial design across Europe and the United States.</li>
+        <li>**1980s–Present:** While challenged by postmodernism, the core Swiss principles are adopted as the standard for digital design, modern UI/UX, and corporate branding globally.</li>
       </ul>
 
-      <h3>Key figures</h3>
-      <dl>
-        <dt>Josef Müller-Brockmann</dt>
-        <dd>Swiss graphic designer known for rigorous grid systems and classic poster works.</dd>
+      <hr style="border: none; border-top: 1px solid var(--muted);">
 
-        <dt>Armin Hofmann</dt>
-        <dd>Teacher and designer whose approach emphasized clarity and formal discipline.</dd>
+      <h2>Influences and Precursors</h2>
+      <p>The International Typographic Style was not created in a vacuum; it synthesized several earlier European movements that championed rationalism and functionalism. The main influences provided the theoretical backbone for the Swiss school:</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem;">
+          <div>
+              <h3>The Bauhaus School</h3>
+              <p>The Bauhaus philosophy, focused on **"form follows function,"** provided the foundational concept that design should be governed by utility rather than aesthetics alone. Bauhaus championed the use of sans-serif fonts and the elimination of superfluous elements, a concept Swiss designers carried forward with strict discipline.</p>
+          </div>
+          <div>
+              <h3>De Stijl Movement</h3>
+              <p>The Dutch De Stijl movement, led by artists like Piet Mondrian, championed radical geometric abstraction, using only horizontal and vertical lines, and primary colors (red, blue, yellow) plus black and white. This extreme rationalization directly informed the Swiss grid's geometric structure and minimalist color theory.</p>
+          </div>
+      </div>
+      <p style="margin-top: 2rem;">By combining the rational functionalism of Bauhaus with the abstract geometry of De Stijl, Swiss designers established a universal language for visual communication that transcended subjective artistic interpretation.</p>
 
-        <dt>Max Bill</dt>
-        <dd>Artist and designer who bridged concrete art and functional design.</dd>
+      <hr style="border: none; border-top: 1px solid var(--muted); margin-top: 3rem;">
+
+      <h2>Key Figures and Pioneers</h2>
+      <dl style="margin-top: 2rem; display: grid; grid-template-columns: 25% 70%; gap: 1rem;">
+        <dt><strong>Ernst Keller</strong></dt>
+        <dd>Often cited as the father of the style. He taught at the Zurich School of Arts and Crafts and established the idea that the design solution must arise organically from the content itself.</dd>
+
+        <dt><strong>Josef Müller-Brockmann</strong></dt>
+        <dd>A prolific Swiss graphic designer renowned for his rigorous, musical approach to grid systems. His work is characterized by mathematical precision and the powerful use of pure typography.</dd>
+
+        <dt><strong>Armin Hofmann</strong></dt>
+        <dd>A highly influential educator at the Basel School of Design. His work is known for dramatic, high-contrast images and the use of form to create symbolic meaning.</dd>
+
+        <dt><strong>Max Bill</strong></dt>
+        <dd>An artist, architect, and designer who bridged Concrete Art and the Swiss Style, defining the principles of functional geometry in design.</dd>
       </dl>
 
-      <h3>Context and impact</h3>
-      <p>The Swiss style influenced corporate identity, signage, editorial layout, and later web/UI design. Its emphasis on objective communication and modular grids remains highly relevant.</p>
-
-      <h3>Sources & further reading</h3>
+      <hr style="border: none; border-top: 1px solid var(--muted); margin-top: 3rem;">
+      
+      <h3>Sources & Further Reading</h3>
       <ol>
-        <li>Major museum pages and design history texts (e.g. MoMA, Design Museum)</li>
-        <li>Books: Josef Müller-Brockmann — <em>Grid Systems in Graphic Design</em></li>
+        <li>Josef Müller-Brockmann — <em>Grid Systems in Graphic Design</em></li>
+        <li>Richard Hollis — <em>Swiss Graphic Design: The Origins and Growth of an International Style</em></li>
       </ol>
+      
     </article>
   </main>
 
-  <footer class="site-footer">
-    <p>Project — Swiss history. Created by: Serge Lawson</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>Created by: Serge Lawson — <a href="https://github.com/sl858/Swiss-design-vibecoding" target="_blank" rel="noopener">Repo</a></p>
+    </div>
   </footer>
 </body>
 </html>
