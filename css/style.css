@@ -1,134 +1,101 @@
-/* style.css */
-
-/* --- Swiss Design Vibe Coding --- */
-
-:root {
-    --color-primary: #000000;
-    --color-secondary: #ff0000; /* Minimalist use of a bright accent color */
-    --color-background: #f0f0f0;
-    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+/* Swiss / International Style CSS - Upgraded for Neo-Minimalism/Nordic Vibe */
+:root{
+  --bg:#fbfbfb; /* Slightly off-white background for softness */
+  --text:#1c1c1c; /* Softer black text */
+  --muted:#7a7a7a;
+  --accent:#326496; /* A subtle, cool blue for a modern accent */
+  --pad:1.5rem;
+  --maxwidth:1200px;
+  --sans: "Helvetica Neue", Arial, sans-serif;
+  --gutter:32px; /* Increased gutter for more breathing room */
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.7; /* Increased line-height for readability */
 }
 
-body {
-    font-family: var(--font-sans);
-    line-height: 1.4;
-    color: var(--color-primary);
-    background-color: var(--color-background);
-    margin: 0;
-    padding: 0;
+/* HEADER & NAVIGATION (Minimalist, subtle separation) */
+.site-header{
+  border-bottom:1px solid #eeeeee; /* Lighter border */
+  padding:var(--pad);
 }
+.header-inner{max-width:var(--maxwidth); margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
+.title{font-weight:400; margin:0; font-size:1.1rem; letter-spacing:0.04em;} /* Lighter font weight */
+.main-nav a{margin-left:1.5rem; text-decoration:none; color:var(--muted); font-weight:400; transition: color 0.2s;}
+.main-nav a:hover{color:var(--text);}
+.main-nav a.active{color:var(--text); font-weight:600;}
 
-/* Grid-based Layout */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    display: grid;
-    /* Simple 12-column conceptual grid */
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-}
+/* MAIN CONTENT */
+.container{max-width:var(--maxwidth); margin:4rem auto; padding:0 calc(var(--pad) * 1.2);}
 
-/* Typography and Hierarchy */
-h1, h2, h3 {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    line-height: 1.1;
-}
-
-h1 {
-    font-size: 3em;
-    color: var(--color-primary);
-    grid-column: 1 / span 8; /* Asymmetrical placement */
-    margin-top: 0;
-}
-
-h2 {
-    font-size: 1.5em;
-    grid-column: 1 / span 12;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--color-primary);
-    margin-top: 30px;
-}
-
-p, ul {
-    font-size: 1em;
-    grid-column: 1 / span 6; /* Content width on the grid */
-}
-
-/* Navigation and Accent */
-.nav {
-    grid-column: 10 / span 3; /* Separate, asymmetric navigation placement */
-    text-align: right;
-    padding-top: 10px;
-}
-
-.nav a {
-    text-decoration: none;
-    color: var(--color-primary);
-    margin-left: 20px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.nav a:hover {
-    color: var(--color-secondary);
-}
-
-/* Demonstration Section - "The Poster" */
-.demonstration {
-    grid-column: 1 / span 12;
-    background-color: white;
-    padding: 40px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-.poster-text {
-    width: 60%;
-}
-
-.poster-element {
-    width: 30%;
+/* LEAD SECTION (The big, centered text like "Nordic Minimalism") */
+.lead-center{
     text-align: center;
-    border: 5px solid var(--color-secondary); /* Accent color usage */
-    padding: 20px 0;
+    padding: 6rem 0 8rem;
+    background-color: #ffffff; /* White block for contrast */
+    margin-top: -4rem; /* Pull up to hide margin above */
 }
+.lead-center h2{font-size:3rem; margin:0 0 1rem 0; font-weight:400; line-height:1.1;}
+.lead-center p{max-width:800px; margin:0 auto 2rem auto; color:var(--muted); font-size:1.2rem;}
 
-.poster-element h3 {
-    margin: 0;
-    font-size: 2em;
+/* FEATURE GRID (The three-column section below the main text) */
+.grid-features{
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gutter);
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 3rem;
 }
-
-.poster-element span {
-    display: block;
-    font-size: 6em;
-    font-weight: 900;
-    color: var(--color-secondary);
-    line-height: 1;
+.grid-features div {
+    max-width: 30%;
 }
-
-/* History Specific Layout */
-.history-section {
-    grid-column: 1 / span 12;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
+.grid-features h3{
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
 }
-
-.history-section h3 {
-    grid-column: 1 / span 3;
-    font-size: 1.2em;
-    color: var(--color-secondary);
-    border-right: 1px solid var(--color-primary);
-    padding-right: 10px;
-    text-align: right;
+.grid-features p{
+    font-size: 0.95rem;
+    color: var(--muted);
 }
+.grid-features ul{display:none;} /* Hiding the old bullet list */
 
-.history-section p {
-    grid-column: 4 / span 8;
-    margin-top: 0;
+/* BUTTONS (Slightly rounded and clean) */
+.cta{margin-top:2rem; text-align:center;}
+.btn{display:inline-block; background:var(--text); color:var(--bg); border:2px solid var(--text); padding:.6rem 1.5rem; border-radius:4px; text-decoration:none; font-weight:600; margin:0 0.5rem; transition: background 0.2s, color 0.2s;}
+.btn.outline{background:transparent; color:var(--text); border-color:var(--text);}
+.btn.outline:hover{background:var(--text); color:var(--bg);}
+
+/* FOOTER */
+.site-footer{border-top:1px solid #eeeeee; margin-top:6rem; padding:1.5rem 0; text-align:center; font-size:.9rem; color:var(--muted); margin-bottom:0;}
+
+/* GALLERY & DEMO (Keeping the existing structural CSS for these pages) */
+.swiss-gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; margin-top:2rem;}
+.swiss-figure{display:flex; flex-direction:column; gap:8px; align-items:flex-start;}
+.photo{width:100%; height:auto; border:1px solid #f0f0f0; box-shadow:0 10px 30px rgba(0,0,0,0.02); border-radius:4px;}
+.figcaption{font-size:0.95rem; color:var(--muted); line-height:1.4;}
+
+/* Demo editorial grid */
+/* Minimal changes to keep the strict grid demonstration */
+.editorial-grid{display:grid; grid-template-columns:180px 1fr 320px; gap:var(--gutter); align-items:start; margin-top:2rem;}
+.col-left{color:var(--muted); font-size:.95rem;}
+.col-main .big-heading{font-size:2.2rem; margin:0 0 1.5rem 0; font-weight:700; line-height:1.1;}
+.col-image .img-sample{width:100%; height:auto; border-radius:4px;}
+
+/* responsive */
+@media (max-width:900px){
+  .editorial-grid{grid-template-columns:1fr; gap:16px;}
+  .header-inner{flex-direction:column; align-items:flex-start; gap:12px;}
+  .lead-center{padding: 4rem 1rem 5rem;}
+  .lead-center h2{font-size:2.2rem;}
+  .grid-features{flex-direction:column; gap:3rem; padding:1rem;}
+  .grid-features div {max-width: 100%;}
 }
