@@ -7,47 +7,48 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="header-inner">
-      <h1 class="title">Swiss / International Style — Demo</h1>
+      <h1 class="title">Swiss / International Style</h1>
       <nav aria-label="Main navigation" class="main-nav">
         <a href="index.html">Home</a>
         <a href="history.html">History</a>
         <a href="examples.html">Examples</a>
-        <a href="demo.html">Demo</a>
+        <a href="demo.html" class="active">Demo</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
     <section>
-      <h2>Grid demonstration</h2>
-      <p>This page shows a simple editorial-style grid with left alignment and typographic hierarchy.</p>
-
-      <div class="editorial-grid" role="region" aria-label="Grid demo">
+      <h2>Swiss Grid Layout Demonstration</h2>
+      <p>This page demonstrates the core principles of the International Typographic Style through a structured editorial layout, alongside a modern example that embodies its aesthetic. Observe how content is organized on an implicit grid, utilizing white space, clear hierarchy, and sans-serif typography for maximum impact and readability.</p>
+      
+      <div class="editorial-grid">
         <div class="col-left">
-          <h3>Swiss clarity</h3>
-          <p>Design systems rely on consistent grids and clear type. The left column is narrow for captions and small notes.</p>
-          <p class="small">Caption / metadata</p>
+          <p>The International Typographic Style, also known as Swiss Style, is a graphic design style that emerged in Switzerland in the 1940s and 1950s.</p>
+          <p>It is characterized by an emphasis on cleanliness, readability, and objectivity.</p>
         </div>
         <div class="col-main">
-          <h1 class="big-heading">Asymmetric composition with generous white space</h1>
-          <p>Large headings + readable body copy. Use left alignment and consistent gutters.</p>
+          <h3 class="big-heading">The Power of Precision and Clarity</h3>
+          <p>At its heart, Swiss design seeks universal clarity. Its principles—including the use of grid systems, sans-serif typefaces like Helvetica, and asymmetrical layouts—aim to communicate information in the most efficient and unbiased way possible. This approach often leads to designs that feel timeless and highly functional, devoid of excessive ornamentation.</p>
+          <p>The style's influence is widespread, seen in everything from corporate logos and signage to web interfaces and album art, proving its enduring appeal in conveying complex information simply.</p>
         </div>
         <div class="col-image">
-          <svg viewBox="0 0 300 200" class="img-sample" role="img" aria-label="Sample image">
-            <rect width="300" height="200" fill="#f3f3f3"/>
-            <text x="16" y="100" font-family="Arial" font-size="18" fill="#111">Photograph / Image</text>
-          </svg>
+          <img src="images/radiohead-poster.jpg" alt="Radiohead concert poster from 1997 with bold red typography against black stripes, influenced by Swiss design." class="demo-poster" />
+          <figcaption style="font-size:0.9rem; color:var(--muted);">
+            **Radiohead Concert Poster (1997)**<br/>
+            This poster, designed for a Radiohead concert, brilliantly utilizes principles rooted in Swiss design. It features a stark, high-contrast palette (black, white, red), a clear grid (implied by the horizontal bars), and bold, legible sans-serif typography. The asymmetrical placement of information and the emphasis on typographic hierarchy are direct homages to the International Typographic Style, demonstrating its lasting impact on modern graphic communication.
+          </figcaption>
         </div>
       </div>
-
-      <p class="note">Tip: Keep type neutral (avoid decorative fonts) and use spacing intentionally.</p>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Demo: layout and typographic rules. Replace with real content as needed.</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>Created by: Serge Lawson — <a href="https://github.com/sl858/Swiss-design-vibecoding" target="_blank" rel="noopener">Repo</a></p>
+    </div>
   </footer>
 </body>
 </html>

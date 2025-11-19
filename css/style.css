@@ -89,6 +89,18 @@ body{
 .col-main .big-heading{font-size:2.2rem; margin:0 0 1.5rem 0; font-weight:700; line-height:1.1;}
 .col-image .img-sample{width:100%; height:auto; border-radius:4px;}
 
+/* NEW: Style for the specific demo image */
+.demo-poster {
+  width: 100%;
+  max-width: 450px; /* Adjust as needed, the poster itself is portrait */
+  height: auto;
+  display: block; /* Ensures it takes up full width of its container and centers properly */
+  margin: 0 auto 1rem auto; /* Center the image and add margin below */
+  border: 1px solid #e0e0e0; /* Subtle border */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+
 /* responsive */
 @media (max-width:900px){
   .editorial-grid{grid-template-columns:1fr; gap:16px;}
