@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Swiss Style — Demo</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="title">Swiss / International Style — Demo</h1>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="history.html">History</a>
+        <a href="examples.html">Examples</a>
+        <a href="demo.html">Demo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Grid demonstration</h2>
+      <p>This page shows a simple editorial-style grid with left alignment and typographic hierarchy.</p>
+
+      <div class="editorial-grid" role="region" aria-label="Grid demo">
+        <div class="col-left">
+          <h3>Swiss clarity</h3>
+          <p>Design systems rely on consistent grids and clear type. The left column is narrow for captions and small notes.</p>
+          <p class="small">Caption / metadata</p>
+        </div>
+        <div class="col-main">
+          <h1 class="big-heading">Asymmetric composition with generous white space</h1>
+          <p>Large headings + readable body copy. Use left alignment and consistent gutters.</p>
+        </div>
+        <div class="col-image">
+          <svg viewBox="0 0 300 200" class="img-sample" role="img" aria-label="Sample image">
+            <rect width="300" height="200" fill="#f3f3f3"/>
+            <text x="16" y="100" font-family="Arial" font-size="18" fill="#111">Photograph / Image</text>
+          </svg>
+        </div>
+      </div>
+
+      <p class="note">Tip: Keep type neutral (avoid decorative fonts) and use spacing intentionally.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Demo: layout and typographic rules. Replace with real content as needed.</p>
+  </footer>
+</body>
+</html>
