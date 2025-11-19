@@ -1,54 +1,134 @@
-/* Swiss / International Style CSS */
-:root{
-  --bg:#ffffff;
-  --text:#0b0b0b;
-  --muted:#6b6b6b;
-  --accent:#ff5a5f;
-  --pad:1.25rem;
-  --maxwidth:1100px;
-  --sans: "Helvetica Neue", Arial, sans-serif;
-  --gutter:24px;
-}
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:var(--sans);
-  color:var(--text);
-  background:var(--bg);
-  line-height:1.6;
-}
-.site-header{
-  border-bottom:1px solid #e6e6e6;
-  padding:calc(var(--pad) * 0.8) calc(var(--pad) * 1.2);
-}
-.header-inner{max-width:var(--maxwidth); margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
-.title{font-weight:700; margin:0; font-size:1.05rem; letter-spacing:0.04em;}
-.main-nav a{margin-left:1rem; text-decoration:none; color:var(--muted); font-weight:600;}
-.container{max-width:var(--maxwidth); margin:2.2rem auto; padding:0 calc(var(--pad) * 1.2);}
-.lead h2{font-size:1.6rem; margin:0 0 0.5rem 0;}
-.lead p{max-width:720px; margin:0 0 1rem 0; color:var(--muted);}
-.grid-features ul{padding-left:1.25rem; color:var(--muted);}
-.cta{margin-top:1.25rem;}
-.btn{display:inline-block; background:transparent; color:var(--text); border:2px solid var(--text); padding:.5rem .85rem; border-radius:3px; text-decoration:none; font-weight:700;}
-.btn.outline{border-color:var(--muted); color:var(--muted);}
-.site-footer{border-top:1px solid #eee; margin-top:3rem; padding:1rem 0; text-align:left; font-size:.95rem; color:var(--muted); margin-bottom:2rem;}
-.swiss-gallery{display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; margin-top:1rem;}
-.swiss-figure{display:flex; flex-direction:column; gap:8px; align-items:flex-start;}
-.photo{width:100%; height:auto; border:1px solid #f0f0f0; box-shadow:0 6px 18px rgba(0,0,0,0.04); border-radius:4px;}
-.figcaption{font-size:0.95rem; color:var(--muted);}
+/* style.css */
 
-/* Demo editorial grid */
-.editorial-grid{display:grid; grid-template-columns:180px 1fr 320px; gap:24px; align-items:start; margin-top:1rem;}
-.col-left{color:var(--muted); font-size:.95rem;}
-.col-main .big-heading{font-size:2rem; margin:0 0 1rem 0; font-weight:700; line-height:1.05;}
-.col-image .img-sample{width:100%; height:auto; border-radius:4px;}
+/* --- Swiss Design Vibe Coding --- */
 
-/* small text */
-.small{font-size:.88rem; color:var(--muted);}
+:root {
+    --color-primary: #000000;
+    --color-secondary: #ff0000; /* Minimalist use of a bright accent color */
+    --color-background: #f0f0f0;
+    --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
 
-/* responsive */
-@media (max-width:900px){
-  .editorial-grid{grid-template-columns:1fr; gap:16px;}
-  .header-inner{flex-direction:column; align-items:flex-start; gap:12px;}
+body {
+    font-family: var(--font-sans);
+    line-height: 1.4;
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 0;
+}
+
+/* Grid-based Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    /* Simple 12-column conceptual grid */
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+/* Typography and Hierarchy */
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.1;
+}
+
+h1 {
+    font-size: 3em;
+    color: var(--color-primary);
+    grid-column: 1 / span 8; /* Asymmetrical placement */
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    grid-column: 1 / span 12;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-primary);
+    margin-top: 30px;
+}
+
+p, ul {
+    font-size: 1em;
+    grid-column: 1 / span 6; /* Content width on the grid */
+}
+
+/* Navigation and Accent */
+.nav {
+    grid-column: 10 / span 3; /* Separate, asymmetric navigation placement */
+    text-align: right;
+    padding-top: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--color-primary);
+    margin-left: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.nav a:hover {
+    color: var(--color-secondary);
+}
+
+/* Demonstration Section - "The Poster" */
+.demonstration {
+    grid-column: 1 / span 12;
+    background-color: white;
+    padding: 40px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.poster-text {
+    width: 60%;
+}
+
+.poster-element {
+    width: 30%;
+    text-align: center;
+    border: 5px solid var(--color-secondary); /* Accent color usage */
+    padding: 20px 0;
+}
+
+.poster-element h3 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.poster-element span {
+    display: block;
+    font-size: 6em;
+    font-weight: 900;
+    color: var(--color-secondary);
+    line-height: 1;
+}
+
+/* History Specific Layout */
+.history-section {
+    grid-column: 1 / span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+.history-section h3 {
+    grid-column: 1 / span 3;
+    font-size: 1.2em;
+    color: var(--color-secondary);
+    border-right: 1px solid var(--color-primary);
+    padding-right: 10px;
+    text-align: right;
+}
+
+.history-section p {
+    grid-column: 4 / span 8;
+    margin-top: 0;
 }
