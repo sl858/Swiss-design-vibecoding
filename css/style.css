@@ -1,21 +1,22 @@
-/* Swiss / International Style CSS - Upgraded for Neo-Minimalism/Nordic Vibe and Larger Text */
+/* Swiss / International Style CSS - Final Version */
 :root{
   --bg:#fbfbfb; /* Slightly off-white background for softness */
   --text:#1c1c1c; /* Softer black text */
   --muted:#7a7a7a;
-  --accent:#FFD700; /* Vibrant Yellow Accent */
+  --accent1:#FFD700; /* Primary Vibrant Yellow Accent */
+  --accent2:#007FFF; /* Secondary Functional Blue Accent */
   --pad:1.5rem;
   --maxwidth:1200px;
   --sans: "Helvetica Neue", Arial, sans-serif;
-  --gutter:32px; /* Increased gutter for more breathing room */
+  --gutter:32px; 
 }
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
   /* INCREASED BASE FONT SIZE AND LINE HEIGHT for distance reading */
-  font-size: 1.15rem; 
-  line-height: 1.8;
+  font-size: 1.3rem; /* Even bigger text */
+  line-height: 1.9; /* More breathing room */
   font-family:var(--sans);
   color:var(--text);
   background:var(--bg);
@@ -26,12 +27,44 @@ body{
   border-bottom:1px solid #eeeeee;
   padding:var(--pad);
 }
-.header-inner{max-width:var(--maxwidth); margin:0 auto; display:flex; align-items:center; justify-content:space-between;}
-/* LARGER TITLE */
-.title{font-weight:400; margin:0; font-size:1.5rem; letter-spacing:0.04em;}
+/* Refactored header for mobile menu toggle */
+.header-inner{
+    max-width:var(--maxwidth); 
+    margin:0 auto; 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-between;
+}
+.title{font-weight:400; margin:0; font-size:1.6rem; letter-spacing:0.04em;}
 .main-nav a{margin-left:1.5rem; text-decoration:none; color:var(--muted); font-weight:400; transition: color 0.2s;}
 .main-nav a:hover{color:var(--text);}
-.main-nav a.active{color:var(--text); font-weight:600;}
+.main-nav a.active{color:var(--accent2); font-weight:600;} /* Use blue for active state */
+
+/* MOBILE MENU TOGGLE (The Hamburger) */
+.menu-toggle {
+    display: none; /* Hidden by default on desktop */
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1000;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--text);
+    position: absolute;
+    left: 0;
+    transition: all 0.2s ease-in-out;
+}
+.menu-toggle span:nth-child(1) { top: 6px; }
+.menu-toggle span:nth-child(2) { top: 14px; }
+.menu-toggle span:nth-child(3) { top: 22px; }
+
 
 /* MAIN CONTENT */
 .container{max-width:var(--maxwidth); margin:4rem auto; padding:0 calc(var(--pad) * 1.2);}
@@ -39,14 +72,14 @@ body{
 /* LEAD SECTION */
 .lead-center{
     text-align: center;
-    padding: 6rem 0 8rem;
+    padding: 7rem 0 9rem; 
     background-color: #ffffff; 
     margin-top: -4rem; 
 }
-/* LARGER HERO HEADING */
-.lead-center h2{font-size:4rem; margin:0 0 1rem 0; font-weight:400; line-height:1.1;}
-/* LARGER HERO TEXT */
-.lead-center p{max-width:800px; margin:0 auto 2rem auto; color:var(--muted); font-size:1.5rem;}
+/* EVEN LARGER HERO HEADING */
+.lead-center h2{font-size:5rem; margin:0 0 1.2rem 0; font-weight:400; line-height:1.1;}
+/* EVEN LARGER HERO TEXT */
+.lead-center p{max-width:900px; margin:0 auto 2.5rem auto; color:var(--muted); font-size:1.7rem;}
 
 /* FEATURE GRID */
 .grid-features{
@@ -62,48 +95,49 @@ body{
 }
 .grid-features h3{
     text-transform: uppercase;
-    font-size: 0.95rem;
+    font-size: 1.1rem; 
     letter-spacing: 0.1em;
-    color: var(--accent);
-    margin-bottom: 0.5rem;
+    color: var(--accent1); /* Yellow Accent */
+    margin-bottom: 0.8rem;
 }
 .grid-features p{
-    font-size: 1.15rem; 
+    font-size: 1.3rem; 
     color: var(--muted);
 }
 .grid-features ul{display:none;}
 
 /* General Section Headings */
 h2{
-  font-size: 2.5rem; 
-  margin-top: 3rem;
-  margin-bottom: 1.5rem;
+  font-size: 3rem; 
+  margin-top: 3.5rem;
+  margin-bottom: 1.8rem;
   font-weight: 500;
 }
 
 /* BUTTONS */
-.cta{margin-top:2rem; text-align:center;}
-.btn{display:inline-block; background:var(--text); color:var(--bg); border:2px solid var(--text); padding:.8rem 2rem; border-radius:4px; text-decoration:none; font-weight:600; margin:0 0.5rem; transition: background 0.2s, color 0.2s;}
+.cta{margin-top:2.5rem; text-align:center;}
+.btn{display:inline-block; background:var(--text); color:var(--bg); border:2px solid var(--text); padding:1rem 2.5rem; border-radius:4px; text-decoration:none; font-weight:600; margin:0 0.8rem; transition: background 0.2s, color 0.2s, border-color 0.2s;}
 .btn.outline{background:transparent; color:var(--text); border-color:var(--text);}
-.btn.outline:hover{background:var(--text); color:var(--bg);}
+.btn.outline:hover{background:var(--accent1); color:var(--text); border-color:var(--accent1);} /* Yellow hover on outline */
+.btn:hover{background:var(--accent2); border-color:var(--accent2); color: var(--bg);} /* Blue hover on solid */
+
 
 /* FOOTER */
-.site-footer{border-top:1px solid #eeeeee; margin-top:6rem; padding:1.5rem 0; text-align:center; font-size:1rem; color:var(--muted); margin-bottom:0;}
+.site-footer{border-top:1px solid #eeeeee; margin-top:8rem; padding:2rem 0; text-align:center; font-size:1.1rem; color:var(--muted); margin-bottom:0;}
 
 /* GALLERY & DEMO */
-/* FORCED TWO COLUMNS FOR EXAMPLES PAGE */
 .swiss-gallery{display:grid; grid-template-columns:repeat(2, 1fr); gap:32px; margin-top:1.5rem;} 
 .swiss-figure{display:flex; flex-direction:column; gap:8px; align-items:flex-start;}
 .photo{width:100%; height:auto; border:1px solid #f0f0f0; box-shadow:0 10px 30px rgba(0,0,0,0.02); border-radius:4px;}
 /* LARGER CAPTIONS */
-.figcaption{font-size:1.1rem; color:var(--muted); line-height:1.6;} 
+.figcaption{font-size:1.2rem; color:var(--muted); line-height:1.6;} 
 
 /* Demo editorial grid */
 .editorial-grid{display:grid; grid-template-columns:200px 1fr 320px; gap:var(--gutter); align-items:start; margin-top:2rem;} 
 /* LARGER SIDE TEXT */
-.col-left{color:var(--muted); font-size:1.1rem;}
+.col-left{color:var(--muted); font-size:1.3rem;}
 /* LARGER GRID HEADING */
-.col-main .big-heading{font-size:3rem; margin:0 0 1.5rem 0; font-weight:700; line-height:1.1;}
+.col-main .big-heading{font-size:3.5rem; margin:0 0 1.8rem 0; font-weight:700; line-height:1.1;}
 .col-image .img-sample{width:100%; height:auto; border-radius:4px;}
 .demo-poster {
   width: 100%;
@@ -117,16 +151,36 @@ h2{
 
 /* responsive */
 @media (max-width:900px){
+  /* Show hamburger on mobile, hide desktop nav */
+  .menu-toggle{display: block;}
+  .main-nav{
+      position: absolute;
+      top: 60px; /* Below header */
+      left: 0;
+      width: 100%;
+      background: var(--bg);
+      border-top: 1px solid #eee;
+      display: none; /* Hide by default. Requires JS/CSS toggle */
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem var(--pad);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  .main-nav a{
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
+  }
+  
   .editorial-grid{grid-template-columns:1fr; gap:16px;}
-  .header-inner{flex-direction:column; align-items:flex-start; gap:12px;}
+  .header-inner{flex-direction:row; align-items:center; justify-content:space-between; gap:0;} 
   .lead-center{padding: 4rem 1rem 5rem;}
-  .lead-center h2{font-size:3rem;}
-  .lead-center p{font-size: 1.3rem;}
+  .lead-center h2{font-size:3.5rem;}
+  .lead-center p{font-size: 1.5rem;}
   .grid-features{flex-direction:column; gap:3rem; padding:1rem;}
   .grid-features div {max-width: 100%;}
-  body{font-size: 1rem; line-height: 1.7;}
-  h2{font-size: 2rem;}
-  .col-main .big-heading{font-size: 2.2rem;}
+  body{font-size: 1.1rem; line-height: 1.8;}
+  h2{font-size: 2.5rem;}
+  .col-main .big-heading{font-size: 2.8rem;}
   /* STACK GALLERY ITEMS ON SMALL SCREENS */
   .swiss-gallery{grid-template-columns:1fr; gap:24px; margin-top:1rem;}
 }

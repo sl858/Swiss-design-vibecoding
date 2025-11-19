@@ -10,7 +10,14 @@
   <header class="site-header" role="banner">
     <div class="header-inner">
       <h1 class="title">Swiss / International Style</h1>
-      <nav aria-label="Main navigation" class="main-nav">
+      
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      
+      <nav aria-label="Main navigation" class="main-nav" id="main-nav-menu">
         <a href="index.html">Home</a>
         <a href="history.html">History</a>
         <a href="examples.html">Examples</a>
@@ -36,7 +43,7 @@
           <p>This section is intentionally extended to demonstrate how type blocks maintain alignment across a grid when the content naturally overflows a standard screen height. The continuous flow of information, segmented by headings, is key to editorial clarity.</p>
         </div>
         <div class="col-image">
-          <img src="images/image7.jpg" alt="Radiohead concert poster from 1997 with bold red typography against black stripes, influenced by Swiss design." class="demo-poster" />
+          <img src="images/radiohead-poster.jpg" alt="Radiohead concert poster from 1997 with bold red typography against black stripes, influenced by Swiss design." class="demo-poster" />
           <figcaption style="font-size:0.9rem; color:var(--muted);">
             **Radiohead Concert Poster (1997)**<br/>
             This poster, designed for a Radiohead concert, brilliantly utilizes principles rooted in Swiss design. It features a stark, high-contrast palette (black, white, red), a clear grid (implied by the horizontal bars), and bold, legible sans-serif typography.
@@ -71,7 +78,7 @@
 
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
-      <p>Created by: Serge Lawson — <a href="https://github.com/sl858/Swiss-design-vibecoding" target="_blank" rel="noopener">Repo</a></p>
+      <p>Created by: Serge (Your Name) — <a href="https://github.com/sl858/Swiss-design-vibecoding" target="_blank" rel="noopener">Repo</a></p>
     </div>
   </footer>
 </body>

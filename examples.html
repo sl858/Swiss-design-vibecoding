@@ -7,13 +7,20 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="header-inner">
-      <h1 class="title">Swiss / International Style — Examples</h1>
-      <nav aria-label="Main navigation" class="main-nav">
+      <h1 class="title">Swiss / International Style</h1>
+      
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      
+      <nav aria-label="Main navigation" class="main-nav" id="main-nav-menu">
         <a href="index.html">Home</a>
         <a href="history.html">History</a>
-        <a href="examples.html">Examples</a>
+        <a href="examples.html" class="active">Examples</a>
         <a href="demo.html">Demo</a>
       </nav>
     </div>
@@ -21,47 +28,73 @@
 
   <main class="container">
     <section>
-      <p>The gallery below features 6 examples of the International Typographic Style, demonstrating the use of grid systems, sans-serif typography, and objective communication.</p>
+      <h2>Canonical Examples and Modern Interpretations</h2>
+      <p>This gallery showcases six designs that exemplify the core principles of the International Typographic Style: **precision**, **typographic hierarchy**, and the reliance on a **mathematical grid**. The strict two-column layout here reinforces the importance of structure.</p>
 
       <div class="swiss-gallery">
         
         <figure class="swiss-figure">
-          <img src="images/image1.jpg" alt="Poster design using a strong grid and Helvetica typography." class="photo" />
-          <figcaption><strong>This is an example of Bauhaus-inspired geometric abstraction, a contemporary pattern heavily influenced by early 20th-century modernist art and design</figcaption>
+          <img src="images/image1.jpg" alt="A canonical example of Swiss design poster" class="photo" />
+          <figcaption>
+            <strong>Image 1 Title (Update Me!)</strong><br/>
+            Designer: [Name of Designer] — Year: [Year]
+          </figcaption>
         </figure>
 
         <figure class="swiss-figure">
-          <img src="images/image2.jpg" alt="A second poster example showing asymmetric composition." class="photo" />
-          <figcaption><strong>This image is a vibrant example of a contemporary pattern that synthesizes elements from two major 20th-century design movements: Bauhaus and Memphis Design</figcaption>
+          <img src="images/image2.jpg" alt="A strict grid-based editorial layout" class="photo" />
+          <figcaption>
+            <strong>Image 2 Title (Update Me!)</strong><br/>
+            Designer: [Name of Designer] — Year: [Year]
+          </figcaption>
         </figure>
 
         <figure class="swiss-figure">
-          <img src="images/image3.jpg" alt="Example of pure typographic hierarchy in Swiss style." class="photo" />
-          <figcaption><strong>This design can be categorized primarily by the Flat Design aesthetic, but it also strongly reflects the influence of the Swiss Design Lineage</figcaption>
+          <img src="images/image3.jpg" alt="Example using strong, legible sans-serif typography" class="photo" />
+          <figcaption>
+            <strong>Image 3 Title (Update Me!)</strong><br/>
+            Designer: [Name of Designer] — Year: [Year]
+          </figcaption>
         </figure>
 
         <figure class="swiss-figure">
-          <img src="images/image4.png" alt="A fourth example of Swiss Style graphic design." class="photo" />
-          <figcaption><strong>This is a contemporary digital creation inspired by the historical Swiss Style and Kandinsky's abstract work</figcaption>
+          <img src="images/image4.png" alt="Minimalist design with focus on white space" class="photo" />
+          <figcaption>
+            <strong>Image 4 Title (Update Me!)</strong><br/>
+            Designer: [Name of Designer] — Year: [Year]
+          </figcaption>
         </figure>
-
+        
         <figure class="swiss-figure">
-          <img src="images/image5.jpeg" alt="A fifth example of Swiss Style graphic design." class="photo" />
-          <figcaption><strong>This design is a direct descendant of the principles established by pioneers of this movement like Ernst Keller, Josef Müller-Brockmann, and Armin Hofmann</figcaption>
+          <img src="images/image5.jpeg" alt="Asymmetric layout showcasing design dynamics" class="photo" />
+          <figcaption>
+            <strong>Image 5 Title (Update Me!)</strong><br/>
+            Designer: [Name of Designer] — Year: [Year]
+          </figcaption>
         </figure>
-
+        
         <figure class="swiss-figure">
-          <img src="images/image6.jpg" alt="A sixth example of Swiss Style graphic design." class="photo" />
-          <figcaption><strong>This image is a direct and modern example of the Swiss Design Lineage</figcaption>
+          <img src="images/image6.jpg" alt="A high-contrast photo and type composition" class="photo" />
+          <figcaption>
+            <strong>Image 6 Title (Update Me!)</strong><br/>
+            Designer: [Name of Designer] — Year: [Year]
+          </figcaption>
         </figure>
-
+        
+      </div>
+      
+      <div style="margin-top: 5rem;">
+          <h2>Guidelines for Attributions</h2>
+          <p>Please update the captions (`<strong>Image X Title</strong>`, `[Name of Designer]`, `[Year]`) for each of the six examples to provide accurate historical context and credit, reinforcing the objective nature of the design style.</p>
       </div>
 
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Project created by: Serge Lawson.</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>Created by: Serge Lawson — <a href="https://github.com/sl858/Swiss-design-vibecoding" target="_blank" rel="noopener">Repo</a></p>
+    </div>
   </footer>
 </body>
 </html>
