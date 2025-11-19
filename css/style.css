@@ -3,7 +3,7 @@
   --bg:#fbfbfb; /* Slightly off-white background for softness */
   --text:#1c1c1c; /* Softer black text */
   --muted:#7a7a7a;
-  --accent:#326496; /* A subtle, cool blue for a modern accent */
+  --accent:#FFD700; /* Vibrant Yellow Accent */
   --pad:1.5rem;
   --maxwidth:1200px;
   --sans: "Helvetica Neue", Arial, sans-serif;
@@ -59,14 +59,14 @@ body{
     text-transform: uppercase;
     font-size: 0.85rem;
     letter-spacing: 0.1em;
-    color: var(--accent);
+    color: var(--accent); /* Uses the new Yellow Accent */
     margin-bottom: 0.5rem;
 }
 .grid-features p{
     font-size: 0.95rem;
     color: var(--muted);
 }
-.grid-features ul{display:none;} /* Hiding the old bullet list */
+.grid-features ul{display:none;}
 
 /* BUTTONS (Slightly rounded and clean) */
 .cta{margin-top:2rem; text-align:center;}
@@ -84,7 +84,6 @@ body{
 .figcaption{font-size:0.95rem; color:var(--muted); line-height:1.4;}
 
 /* Demo editorial grid */
-/* Minimal changes to keep the strict grid demonstration */
 .editorial-grid{display:grid; grid-template-columns:180px 1fr 320px; gap:var(--gutter); align-items:start; margin-top:2rem;}
 .col-left{color:var(--muted); font-size:.95rem;}
 .col-main .big-heading{font-size:2.2rem; margin:0 0 1.5rem 0; font-weight:700; line-height:1.1;}
